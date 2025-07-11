@@ -1,9 +1,8 @@
 # Gaps and Next Steps in E.H. Jennings Research
 
-Major Gaps: Exact birth/death, full family tree, documents/photos.  
+Major Gaps: Full probate/will (post-1923); detailed Transylvania Oil Syndicate; complete children from second marriage.  
 
-Next Steps:
-- Search "Edward Henry Jennings death before 1930" on genealogy sites.
-- Provide past Grok chat transcripts for integration.
-- Explore DNA testing for relatives.
-- Contact historical societies in suspected regions (e.g., New York/Pennsylvania).
+Next Steps:  
+- Search 1923 Pittsburgh obituaries.  
+- Explore Ancestry for Jr.'s vitals/lineage.  
+- Contact PA/NC historical societies for business records.
