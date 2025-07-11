@@ -9,7 +9,7 @@ def get_newspaper_image_urls(query, start_year=1860, end_year=1930, max_items=10
     Retrieves thumbnail and full JP2 image URLs for analysis.
     Handles pagination, rate limiting (20/min), and deep paging limit (100,000 items).
     '''
-    base_url = f"https://chroniclingamerica.loc.gov/search/pages/results/?proxtext={query}&dateFilterType=yearRange&date1={start_year}&date2={end_year}&rows=100&format=json"
+    base_url = f"https://chroniclingamerica.loc.gov/search/pages/results/?andtext={query}&dateFilterType=yearRange&date1={start_year}&date2={end_year}&rows=100&format=json"
     current_url = base_url
     total_items = 0
     while current_url and total_items < max_items:
@@ -18,7 +18,7 @@ def get_newspaper_image_urls(query, start_year=1860, end_year=1930, max_items=10
             call = requests.get(current_url, params=params)
             call.raise_for_status()
             data = call.json()
-            results = data['results']
+            results = data['items']  # Confirmed 'items' per docs
             for result in results:
                 if "newspaper" in result.get("original_format", []):
                     thumbnail = result.get("image_url", [])[-1] if result.get("image_url") else None
