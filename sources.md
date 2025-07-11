@@ -12,3 +12,18 @@ Verified Documents:
 - Armstrong County history/tax records: Potential oil leases (1840s–1940s); family iron/oil ties in Bradys Bend (contact society for microfilm).  
 
 Findings: E.H. Jennings built multi-state empire: PA oil/gas (1891 Royal Gas, leases, refining 1925), banking (Columbia National, scandal 1910), NC lumber/mining (1905 Buncombe timber, Toxaway 1911, lawsuits 1914–1915); extensions to WV (1912 leases) and MS (1922 mills). Died pre-1930 of pneumonia; legacy in syndicates continued by family (e.g., Jr. in Pure Oil). Disambiguate from unrelated Jennings (e.g., Louisiana publisher, 1863 banker).
+
+
+# Sources and Findings for E.H. Jennings
+
+Verified Documents:  
+- Find a Grave (ID 90963809): Birth, death, burial, family links.  
+- *Sistersville Oil Review* (Oct 19, 1898): Oil leases in Tyler County, W. Va. (Lemasters 101 acres, Hough 469, Parks 100, Hardman guardian 245, Parks et al 150).  
+- *The Spokane Press* (Jan 22, 1910): Graft scandal arrest; banker/oil titles (Columbia Bank, Pure Oil, Colonial Trust, Jennings Bros.); millionaire; bail $10,000–$15,000.  
+- *Jackson County Journal* (Apr 17, 1914): Smathers vs. Jennings lawsuit.  
+- *Pittsburgh Gazette Times* (Nov 18, 1923): Obituary; pneumonia; banker/oil man; funeral details.  
+- *Evening Star* (Sep 4, 1931): Jr.'s obituary; father's oil syndicate legacy (Pure, Federal, Transylvania); Jr.'s suicide.  
+- NRHP Nomination: Toxaway purchase 1911 ($100,000).  
+- Ancestry/FamilySearch: Richard Gundry birth (Sep 17, 1880); Yale 1903; Richard Jr. birth (Aug 2, 1924).  
+
+Findings: Multi-state empire (PA oil/gas 1891+, W. Va. leases 1898, NC lumber 1905, Toxaway 1911, lawsuits 1914); banking scandal 1910; family continuation; no census corroboration. Disambiguate from unrelated Jennings.
