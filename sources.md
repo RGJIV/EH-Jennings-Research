@@ -27,3 +27,12 @@ Verified Documents:
 - Ancestry/FamilySearch: Richard Gundry birth (Sep 17, 1880); Yale 1903; Richard Jr. birth (Aug 2, 1924).  
 
 Findings: Multi-state empire (PA oil/gas 1891+, W. Va. leases 1898, NC lumber 1905, Toxaway 1911, lawsuits 1914); banking scandal 1910; family continuation; no census corroboration. Disambiguate from unrelated Jennings.
+
+
+# Sources and Findings for E.H. Jennings
+
+Verified Documents:  
+- Find a Grave (ID 90963809): Core vital records.  
+- Chronicling America API (accessed Jul 11, 2025): Newspaper searches for "e h jennings" (e.g., 1910 scandal in Spokane Press, 1898 leases in Sistersville Oil Review).
+
+Findings: Confirmed oil leases (1898 W. Va.); banking scandal (1910 Pittsburg graft). Disambiguate from unrelated Jennings.
