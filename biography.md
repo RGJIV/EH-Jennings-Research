@@ -12,6 +12,10 @@ Edward Henry Jennings (E. H. Jennings, Sr.) was a Pittsburgh-based industrialist
 - Federal Oil Co. (family interests; confirmation count: 1 from 1931 obit).
 - Transylvania Oil Syndicate (confirmation count: 1 from 1931 obit).
 - Toxaway Company (stockholder, director, former VP; built 1902-1903 dam; owned post-1911; confirmation count: 1).
+- Penn Home Oil Co. (Jr. officer; family oil; confirmation count: 1 from 1931 obit).
+- Delmonte Oil Co. (Jr. officer; family oil; confirmation count: 1 from 1931 obit).
+- Jennings Oil Co. (Jr. officer; family oil; confirmation count: 1 from 1931 obit).
+- Delaware Oil Co. (Jr. officer; family oil; confirmation count: 1 from 1931 obit).
 - Other: PA leases (Zelienople 1905–1906, Venango 1910, Allegheny mergers 1914–1915, Fayette County gas 1928); NC lumber (Buncombe County timber 1905); WV border fields (1912); MS mills (1922); refining facilities (1925).
 
 ## WV Oil Leases (Full List from 1898, Filed Post-Oct. 3)
@@ -25,7 +29,7 @@ Edward Henry Jennings (E. H. Jennings, Sr.) was a Pittsburgh-based industrialist
 No mentions of Western NC beyond Toxaway; businesses unchanged across iterations.
 
 ## Key Events and Legal
-- 1910: Arrested in Pittsburg graft scandal (conspiracy/bribery for depositories; bail $10,000–$15,000; Spokane Press Jan 22, 1910); sentencing postponed with A.C. Griffin due to family illnesses (likely federal/banking-related; Palestine Daily Herald May 14, 1910; confirmation count: 1).
+- 1910: Arrested in Pittsburg graft scandal (conspiracy/bribery for depositories; bail $10,000–$15,000; Spokane Press Jan 22, 1910); sentencing postponed with A.C. Griffin due to family illness (likely federal/banking-related; Palestine Daily Herald May 14, 1910; confirmation count: 1).
 - 1916: Toxaway Dam failure (earthen structure, 5.3B gallons released; persistent leak/mineral spring, no draw-down; caused NC/SC floods, bridge damage ~$6K-$7K; low human toll reduced records).
 - 1921: Primary case—Commissioners v. Jennings (181 N.C. 393, 107 S.E. 312; NC Supreme Court; plaintiffs: Pickens/Oconee Co., SC; negligence claims on design/leak/maintenance; Jennings liable as owner; mistrial, new trial ordered; no final verdict found; origin likely Transylvania Co. Superior Court; confirmation count: 1).
 - Other Lawsuits: Smathers vs. Jennings (1914–1915, Jackson County Journal Apr 17, 1914).
