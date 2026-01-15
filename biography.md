@@ -1,26 +1,30 @@
-# Biography: Edward Henry Jennings (E. H. Jennings, Sr.)
+# Biography of Edward Henry Jennings (E. H. Jennings, Sr.)
 
-Edward Henry Jennings (E. H. Jennings, Sr.), born December 25, 1830, in Gwinear, Cornwall, England, was a Pittsburgh-based industrialist who immigrated to the United States and built a business empire in oil, banking, and real estate. He died before 1930 (exact date TBD; possible 1894 death record for an Edward Jennings Sr. in Queenstown, PA, under verification). Jennings was a major shareholder and officer in companies like the Toxaway Company, Pure Oil Co., and Columbia National Bank. His ventures spanned Pennsylvania (Pittsburgh hub), West Virginia (oil), and North Carolina/South Carolina (dam and property).
+Edward Henry Jennings (E. H. Jennings, Sr.) was a Pittsburgh-based industrialist, possibly born December 25, 1830, in Gwinear, Cornwall Unitary Authority, England (vital record from Ancestry; buried in US, fits migration for economic opportunities). He built a business empire in oil, banking, and real estate, with major ties to Pennsylvania (Pittsburgh, Allegheny/Westmoreland/Armstrong Counties) and North Carolina (Transylvania County for Toxaway). Active 1890-1917; died before 1930 (no exact death date found). Pittsburgh industrialist; major shareholder/officer in multiple firms. Post-1911, owned Toxaway Dam after foreclosure in U.S. District Court (Western NC).
 
-## Early Life and Immigration
-- **Birth and Origins**: Born 1830 in England; immigrated to PA, possibly for economic opportunities in industry. (Source: Ancestry.com vital record, confirmation count: 1)
-- **Early Career**: Entered Pittsburgh's growing oil and finance sectors in the late 1800s. Involved in E. H. Jennings & Bros. Co. for oil operations.
+## Business Roles and Ventures (All Iterations)
+- President, Columbia National Bank (Pittsburgh, PA; confirmed in 1910 article; confirmation count: 1).
+- Director, Colonial Trust Co. (confirmation count: 1).
+- Interests in Pure Oil Co. (vice president role via son Jr.; family operations; confirmation count: 1).
+- E. H. Jennings Bros. Co. (oil producers; confirmation count: 1).
+- Federal Oil Co. (family interests; confirmation count: 1 from 1931 obit).
+- Transylvania Oil Syndicate (confirmation count: 1 from 1931 obit).
+- Toxaway Company (stockholder, director, former VP; built 1902-1903 dam; owned post-1911; confirmation count: 1).
 
-## Business Empire
-- **Oil Interests**: 
-  - Acquired leases in Tyler County, WV (post-Oct. 1898): 101 acres (Elijah Lemasters), 469 acres (Andrew Hough et al.), 100 acres (F. M. Parks), 245 acres (O. W. O. Hardman, guardian), 150 acres (L. W. Parks et al.). (Source: Historical filings; no Columbia Bank/Western NC ties)
-  - Family legacy: Interests in Federal Oil Co. and Transylvania Oil Syndicate (noted in Jr.'s 1931 obituary).
-- **Banking**: President of Columbia National Bank (Pittsburgh, PA) by 1910. (Source: Palestine Daily Herald, May 14, 1910; confirmation: 1)
-- **Real Estate and Development**: Major role in Toxaway Company (built Lake Toxaway dam, 1902–1903). After 1911 foreclosure (U.S. District Court, Western NC), Jennings personally owned the dam and lake. (Source: North Carolina Reports)
+## WV Oil Leases (Full List from 1898, Filed Post-Oct. 3)
+- Elijah Lemasters: 101 acres.
+- Andrew Hough et al: 469 acres.
+- F. M. Parks: 100 acres.
+- O. W. O. Hardman (guardian of Amos Lemasters heirs): 245 acres.
+- L. W. Parks et al: 150 acres.
+(Total ~1,065 acres in Tyler County, WV; via E. H. Jennings & Bros.; confirmation count: 1).
 
-## Legal Involvements
-- **1910 Sentencing Delay**: As Columbia National Bank president, sentencing postponed due to family illness (co-defendant: A. C. Griffin). Possible federal/banking charges. (Source: Chronicling America; full details pending)
-- **1916 Toxaway Dam Failure**: Owned dam at failure (Aug. 13, 1916; 5.3B gallons released, flooding NC/SC). Sued in *Commissioners v. Jennings* (181 N.C. 393, 1921) for negligence (poor design, ignored leaks, no draw-down). Mistrial; new trial ordered (no final outcome found). Potential additional suits in Transylvania County Superior Court or SC courts (undigitized). (Source: North Carolina Reports, Vol. 181; confirmation: 1)
+No mentions of Western NC beyond Toxaway; businesses unchanged across iterations.
 
-## Family and Legacy
-- **Marriage and Children**: Married (details obscured); father of Edward H. Jennings Jr. (VP, Pure Oil Co.; suicide 1931). Possible ties to multi-generational line (Jr., III in Allegheny County marriages). (Source: Ancestry.com; Jr. obituary)
-- **Death**: Pre-1930; possible 1894 PA death (Queenstown, Armstrong County). Buried in US (cemetery TBD).
-- **Legacy**: Industrial prominence; Jr. continued oil operations. No confirmed net worth or full obituary.
+## Key Events and Legal
+- 1910: Sentencing postponed for E.H. Jennings (Columbia president) and A.C. Griffin due to family illnesses (likely federal/banking-related; confirmation count: 1).
+- 1916: Toxaway Dam failure (earthen structure, 5.3B gallons released; persistent leak/mineral spring, no draw-down; caused NC/SC floods, bridge damage ~$6K-$7K; low human toll reduced records).
+- 1921: Primary case—Commissioners v. Jennings (181 N.C. 393, 107 S.E. 312; NC Supreme Court; plaintiffs: Pickens/Oconee Co., SC; negligence claims on design/leak/maintenance; Jennings liable as owner; mistrial, new trial ordered; no final verdict found; origin likely Transylvania Co. Superior Court; confirmation count: 1).
 
-## Sources and Notes
-See sources.md. All facts cross-verified where possible; confirmation counts low due to digitization gaps.
+## Unrelated Exclusions (From All Iterations)
+- Excluded: LA publisher (Jennings Daily Record, 1900-1903); post-1930 cases (e.g., 1990 Nichols v. Lake Toxaway Co.); U.S. Supreme Court unrelated (e.g., Carolina Glass 1916, Toxaway Hotel 1910); other Jennings vitals (e.g., NY/LA/MA births not tied).
