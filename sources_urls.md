@@ -14,5 +14,10 @@ This file lists all source URLs found so far for Edward Henry Jennings (E.H. Jen
 - https://www.ancestry.com/ (Ancestry.com, accessed Jul 11, 2025): Vital records (marriages, births for children like Richard Gundry 1880); family tree entries (e.g., Richard Jr. 1924 birth).
 - https://www.familysearch.org/ (FamilySearch, accessed Jul 11, 2025): Genealogy for Richard Gundry (Shadyside Academy, Yale 1903; descendants).
 - https://npgallery.nps.gov/AssetDetail/NRIS/88000032 (NRHP Nomination for Toxaway, accessed Jul 11, 2025): 1911 purchase for $100,000; NC lumber/resorts context.
+- https://www.greetingsfromthepast.com/2019/10/toxaway-falls-and-the-toxaway-dam-break/ (Toxaway dam break, accessed various dates): 1916 failure details.
+- https://thelaurelofasheville.com/lifestyle/history-feature-a-legacy-washed-away-lake-toxaways-1916-flood/ (Legacy washed away, accessed various dates): 1916 flood context.
+- https://library.transylvaniacounty.org/the-toxaway-inn-part-two-aftermath/ (Toxaway Inn aftermath, accessed various dates): Post-1916 details.
+- https://historictoxaway.org/lake-toxaway-dam-burst/ (Dam burst, accessed various dates): Historical account.
+- https://library.transylvaniacounty.org/1916-flood/ (1916 flood, accessed various dates): Local records.
 
 Future additions will be appended here.
