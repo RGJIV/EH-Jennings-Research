@@ -9,6 +9,7 @@
 - Colonial Trust Co.: E.H. confirmed as president in contemporary bank history.
 - 1921 *Commissioners v. Jennings* (181 N.C. 393): now fully verified from published North Carolina Reports.
 - Probate venue: Allegheny County Wills & Orphans Division identified; physical request path documented.
+- **Toxaway Company / Lake Toxaway cluster**: ownership path (largest shareholder → 1911 receivership purchase → dam owner at 1916 failure → estate continuation → 1955/1960 sales), dam construction and failure, principal litigation, and post-1923 family deeds now documented with primary + strong secondary support. See dedicated `toxaway.md` and sources.md rows 31–38.
 
 **Still open**
 - Exact birth/death for Edward Jr.
@@ -47,4 +48,5 @@
 
 **Repo**
 - Continue appending only verified primary rows to sources.md.
+- Dedicated `toxaway.md` now exists; expand with primary court/land files as obtained.
 - Consider holdings-tracker.md once estate and additional corporate records arrive.
