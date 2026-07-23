@@ -8,7 +8,7 @@ status, so confidence level is visible at a glance instead of split across
 files.
 
 **Tier key:**
-- **Primary** — direct scan of a historical record (loc.gov/Chronicling America, court filing, NRHP nomination)
+- **Primary** — direct scan of a historical record (loc.gov/Chronicling America, court filing, NRHP nomination, contemporary bank histories, published case reports)
 - **Genealogy aggregator** — Ancestry/FamilySearch/Find a Grave; usually a transcription or index entry, not the record image itself
 - **Secondary** — modern third-party account (local history blogs, county library posts) not itself a primary record
 
@@ -37,6 +37,13 @@ files.
 | 15 | Post-1916 aftermath | [library.transylvaniacounty.org](https://library.transylvaniacounty.org/the-toxaway-inn-part-two-aftermath/) | Secondary | Unverified against primary record | — | Same caveat as #13 |
 | 16 | Dam burst historical account | [historictoxaway.org](https://historictoxaway.org/lake-toxaway-dam-burst/) | Secondary | Unverified against primary record | — | Same caveat as #13 |
 | 17 | 1916 flood local records | [library.transylvaniacounty.org/1916-flood](https://library.transylvaniacounty.org/1916-flood/) | Secondary | Unverified against primary record | — | Same caveat as #13 |
+| 18 | E.H. Jennings was founder (1893) and president of Columbia National Bank of Pittsburgh ("oil bank"); first officers: E.H. Jennings (pres.), H.W. Bishop (VP), F.A. Griffin (cashier). Still identified as organizer in the 1927 merger announcement with Bank of Pittsburgh, N.A. | *Banks and Bankers of the Keystone State* (Finance Co., Pittsburgh); *Commercial and Financial Chronicle* 5 Feb 1927 (FRASER); multiple 1910 Chronicling America pages | Primary | Confirmed | 3+ | No retrieved source names R.G. Jennings as president at any point, including the 1927 merger. Numismatic claim of R.G. presidency appears to be a father/son mix-up. |
+| 19 | E.H. Jennings was a major stockholder in the original Pure Oil Company (1895 independent, NJ-incorporated, Pittsburgh-area HQ / Oil City ops, organized against Standard Oil). In 1916–17 he contracted sale of ~941,000 shares to William A. Read & Co. / Ohio Cities Gas Co. (~$23M); stock deposited at Columbia National Bank. Ohio Cities Gas renamed Pure Oil in 1920 (the later national company). | *Queen v. Jennings*, 93 N.J.L. 353, 108 A. 379 (N.J. 1919); *Commercial and Financial Chronicle* July 1917 (FRASER); Pure Oil corporate history | Primary | Confirmed | 2+ | Resolves identity ambiguity: connection is to the 1895 independent Pure Oil Co. E.H. is stockholder/seller, not named as officer in these records. Son Jr. later VP of Pure Oil (1931). |
+| 20 | E.H. Jennings listed as president of Colonial Trust Co. | *Banks and Bankers of the Keystone State* (same volume as #18) | Primary | Confirmed | 1 | Distinct from Columbia National Bank. |
+| 21 | 1921 case fully verified: *Commissioners of Pickens County and Oconee County, SC v. E.H. Jennings*, 181 N.C. 393, 107 S.E. 312 (N.C. Sup. Ct., filed 18 May 1921). Jennings as stockholder/director/former VP of Toxaway Co., then 1911 purchaser of its holdings including the dam. | North Carolina Reports / published case text (Old Pendleton District Newsletter 2011 citation matching primary reports) | Primary | Confirmed | 2+ | Upgrades prior unconfirmed citation. Matches NRHP and secondary accounts. |
+| 22 | Federal Oil Co. and Transylvania Oil Syndicate | Only named as family interests in the 1931 *Evening Star* obituary of E.H. Jennings Jr. | Primary | Confirmed (family-interest mention only) | 1 | No independent incorporation or trade-press records retrieved establishing them as distinct operating entities under E.H. control. |
+| 23 | Royal Gas Company | No independent primary or secondary hits linking the name to E.H./Jennings Bros. in Pittsburgh/PA oil-gas context | — | Unconfirmed | 0 | 1891 co-founding claim in prior biography/timeline remains unsupported by retrieved sources. |
+| 24 | 1923 estate / probate path | Allegheny County Department of Court Records, Wills & Orphans Division, City-County Building, 414 Grant St., 1st Floor, Pittsburgh, PA 15219 (412-350-4180). Pre-1990s records are paper/microfilm; request by decedent name + ~1923–24. | Secondary (official county description) | Confirmed (location only) | 1 | No digitized inventory, will, or valuation found online. Physical request required for estate value/heirs/distribution. |
 
 ## Adding new sources
 

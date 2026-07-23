@@ -1,29 +1,33 @@
 # EH-Jennings-Research
 
-This repository documents research on Edward Henry Jennings (E. H. Jennings, Sr.), a Pittsburgh industrialist active in oil, banking, and real estate from the 1880s to the 1920s, who died before 1930. Focus: Business empire (e.g., Pure Oil Co., Columbia National Bank, Colonial Trust Co., E. H. Jennings Bros. Co., Federal Oil Co., Transylvania Oil Syndicate, Toxaway Company, Royal Gas Company), legal cases (e.g., 1916 Toxaway Dam failure, 1921 Commissioners v. Jennings, 1910 sentencing delay with A.C. Griffin), family lineage (expanded PA/NC vitals with parents/siblings/spouses/descendants, Ancestry fragments), and historical context. Primary sources: Library of Congress (loc.gov/Chronicling America), Ancestry.com vitals, Find a Grave, North Carolina Reports, Harvard Baker Library guides, and regional archives.
+This repository documents research on Edward Henry Jennings (E. H. Jennings, Sr.), a Pittsburgh industrialist active in oil, banking, and real estate from the 1880s to the 1920s, who died 17 November 1923. Focus: Business empire (Pure Oil Co. [1895 independent], Columbia National Bank, Colonial Trust Co., E. H. Jennings Bros. Co., Toxaway Company, and related entities), legal cases (1916 Toxaway Dam failure and 1921 *Commissioners v. Jennings*, 1910 graft scandal), family lineage, and historical context.
 
-All facts have confirmation counts (mostly 1, from single sources like newspapers); no major updates beyond initial findings due to digitization gaps. Excludes unrelated Jennings (e.g., LA publisher, post-1930 events except Jr.'s 1931 obit for legacy).
+Primary sources: Library of Congress (loc.gov/Chronicling America), contemporary bank histories (*Banks and Bankers of the Keystone State*), published North Carolina Reports, FRASER financial press, NRHP nominations, Ancestry/FamilySearch/Find a Grave, and regional archives.
+
+**2026-07-23 update**: Pure Oil identity resolved (original 1895 independent company); Columbia National Bank presidency confirmed as E.H. Jennings (founder 1893); Colonial Trust presidency confirmed; 1921 case fully verified as primary; Allegheny County probate path identified. Royal Gas Company remains unconfirmed. See `sources.md` rows 18–24 and updated `gaps-next-steps.md`.
+
+All facts carry explicit tier and status. Excludes unrelated Jennings (e.g., LA publisher, post-1930 events except Jr.’s 1931 obit for legacy).
 
 ## Key Research Areas
 
-* **Biography**: Life overview, business roles, Pittsburgh/NC ties, and English origins.
-* **Timeline**: Chronological events (1819 parent birth to pre-1930 death, including 1911 foreclosure).
-* **Family Tree**: Vitals, descendants, Ancestry fragments (e.g., obscured dates), merged with expanded tree (parents, siblings, spouses, grandchildren).
-* **Business Ventures**: Oil leases (WV full list), banking (PA), dam ownership (NC), with confirmation counts.
-* **Legal Cases**: 1921 appeal, 1910 sentencing, potential lower courts, limitations, and recommendations.
-* **Sources**: All references, URLs, and excerpts (e.g., 1910/1931 articles).
-* **Gaps/Next Steps**: Undigitized records, tool challenges (e.g., browse_page failures), and all prior recommendations.
-* **Articles**: Key newspaper excerpts and analyses (e.g., 1931 obit transcription errors).
-* **Scripts**: Tools for loc.gov API; notes on failures (e.g., JP2/PDF issues).
+* **Biography**: Life overview, business roles, Pittsburgh/NC ties.
+* **Timeline**: Chronological events with status notes.
+* **Family Tree**: Vitals and descendants.
+* **Business Ventures / Holdings**: Oil leases (WV full list), banking, dam ownership, with confirmation counts.
+* **Legal Cases**: 1921 appeal (now confirmed primary), 1910 sentencing, lower-court recommendations.
+* **Sources**: Single authoritative table with tier/status for every claim.
+* **Gaps/Next Steps**: Updated 2026-07-23 with resolved items and remaining open questions (estate file request, Royal Gas, R.G. Sr. post-1923 activity).
+* **Articles**: Key newspaper excerpts (1931 Jr. obit cleaned of prior fabrication).
+* **Scripts**: Tools for loc.gov API.
 
 ## Usage
 
-* Clone: git clone https://github.com/RGJIV/EH-Jennings-Research.git
-* Run scripts: Python 3+ required; focus on Chronicling America for newspaper searches (note: dynamic content issues in tools).
-* Contributions: Pull requests welcome for verified loc.gov findings.
+* Clone: `git clone https://github.com/RGJIV/EH-Jennings-Research.git`
+* Run scripts: Python 3+; focus on Chronicling America.
+* Contributions: Pull requests welcome for verified primary findings only.
 
 ## License
 
 Public domain/CC0 (historical research).
 
-Last Updated: January 14, 2026
+Last Updated: 23 July 2026
