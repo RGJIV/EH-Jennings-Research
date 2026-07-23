@@ -1,0 +1,10 @@
+# EH-Jennings-Research script dependencies
+# Install with: pip install -r requirements.txt
+#
+# fetch_chronicling_america.py itself only uses the Python standard library
+# (urllib, json, csv, argparse) -- no third-party dependencies required for
+# that script specifically. This file is here so future scripts have a
+# place to declare dependencies, and so the repo signals its Python version
+# expectation clearly.
+
+# Minimum Python version: 3.10 (uses `dict | None` union-type syntax)
