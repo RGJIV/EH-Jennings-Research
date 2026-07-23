@@ -14,6 +14,8 @@ Compiled / updated 23 July 2026. Only holdings and connections supported by prim
 | **Marion County, WV** | No. 2 well on the A. farm | *Wheeling Register*, 9 & 10 Apr 1903 | E. H. Jennings Bros. | Confirmed (Primary) |
 | **Marion County / nearby** | No. 10 well on the Jennive farm | *Wheeling Register*, 20 May 1903 | E. H. Jennings Bros. | Confirmed (Primary) |
 | **Marion County / nearby** | Two locations made on the Morris farm | *Wheeling Register*, 25 Jun 1903 | E. H. Jennings Bros. | Confirmed (Primary) |
+| **Marion County / nearby** | No. 3 well on the A. farm | *Wheeling Register*, 10 Jun 1903 | E. H. Jennings Bros. | Confirmed (Primary) |
+| **Harrison County, WV area** | Well completed (with Preulenlierger) | *Fairmont West Virginian*, 26 Jan 1907 | E. H. Jennings Brothers | Confirmed (Primary) |
 | **Jefferson County, OH** (Sugar Grove / Knoxville field) | Oil leases subject of lawsuit; claimed 1/4 interest by Charles M. Williams | *Sistersville Daily Oil Review*, 9 Apr 1904 | E.H. Jennings & Brothers (Edward H., R.M., John G., Everett); co-defendant Buckeye Pipe Line Co. (Maxburg division) | Confirmed (Primary) |
 | **Jefferson County, OH** (west of Empire) | Well No. 8 on M.M. Culp farm, reached Berea grit | *Sistersville Daily Oil Review*, 29 Apr 1905 | E.H. Jennings & Brothers | Confirmed (Primary) |
 
@@ -28,7 +30,7 @@ Compiled / updated 23 July 2026. Only holdings and connections supported by prim
 
 **Operator name**: Jennings Brothers, E. H., Company  
 Wells recorded in: Doddridge, Marion, Pleasants, Ritchie, Roane, Tyler, and Wetzel counties, WV.  
-Source: WellWiki.org operator records. Consistent with the 1898 Tyler County and 1902–03 Marion County activity documented above.
+Source: WellWiki.org operator records. Consistent with the 1898 Tyler County and 1902–07 activity documented above.
 
 ## Connected Companies
 
@@ -42,13 +44,13 @@ Source: WellWiki.org operator records. Consistent with the 1898 Tyler County and
 
 ## Still Open / Missing from Inventory
 
-- Full list of individual farm or lease names beyond those listed above (many more likely exist in 1902–05 trade press).
+- Full list of individual farm or lease names beyond those listed above (many more likely exist in 1902–07 trade press).
 - Exact acreage and ownership percentages in the Ohio Sugar Grove / Knoxville field.
 - Outcome of *Charles M. Williams v. E.H. Jennings et al.* (Jefferson Co. Common Pleas, ~1904).
 - Independent corporate confirmation of Kanawha Oil Company beyond the 1904 article and the biographical sketch.
 - Precise identification of “Maxburg division” of Buckeye Pipe Line.
 - Identity of partner “Everett Jennings” named in the 1904 article.
-- More complete 1902–1905 well reports from Marion, Doddridge, and surrounding counties.
+- More complete 1902–1907 well reports from Marion, Doddridge, Harrison, and surrounding counties.
 
 ## Related Project Files
 
