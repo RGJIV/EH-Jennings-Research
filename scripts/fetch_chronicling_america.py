@@ -1,186 +1,216 @@
 #!/usr/bin/env python3
 """
-fetch_chronicling_america.py
+fetch_chronicling_america.py  (improved loc.gov JSON API version)
+Walks a Chronicling America newspaper via the official loc.gov JSON API
+and searches OCR full text for keywords. Designed for the EH-Jennings-Research
+project.
 
-Replacement for the old legacy-Chronicling-America-API script.
+Key improvements over the original draft:
+- Progress file so long runs can be resumed cleanly
+- Optional list of OCR variants (Jenninga, Jennlngs, etc.)
+- Slightly more defensive JSON parsing
+- Clearer logging and summary
+- Default delay raised to 4.0 s for safer unattended runs
 
-Background: chroniclingamerica.loc.gov's dedicated API was retired when the
-site migrated to the main loc.gov platform (Aug 4, 2025). Chronicling
-America content is now served exclusively through the loc.gov JSON/YAML API.
-Plain HTML page requests to www.loc.gov/item/... or .../resource/... are
-frequently blocked by bot detection; appending `?fo=json` to an item or
-resource URL requests the underlying JSON directly instead, which is the
-documented, supported way to pull structured data and full OCR text.
+USAGE EXAMPLE (Sistersville Daily Oil Review era of interest):
 
-IMPORTANT CAVEAT (learned the hard way): even the JSON endpoint gets
-bot-blocked if you hit it too fast or too often in a short window. This
-script defaults to a multi-second delay between requests and retries with
-backoff. If you still get blocked, slow it down further (increase
---delay) rather than assuming the endpoint is dead -- it may just need
-more time between calls. Don't assume a title/date is inaccessible after
-one failure; the blocking observed during testing was inconsistent even
-for identical URL patterns.
+    python scripts/fetch_chronicling_america.py \
+        --lccn sn86092356 \
+        --start 1903-01-01 \
+        --end 1906-06-30 \
+        --keywords "Jennings" "Kanawha" "Buckeye" "Sugar Grove" "Culp" \
+        --ocr-variants "Jenninga" "Jennlngs" "Kanawlia" \
+        --output sistersville_jennings_1903-1906.csv \
+        --delay 4.0
 
-Usage:
-    python fetch_chronicling_america.py --lccn sn88085947 --date 1910-01-22 --edition 1
-    python fetch_chronicling_america.py --batch batch.csv --delay 6
-
-batch.csv format (no header):
-    sn88085947,1910-01-22,1
-    sn83045462,1931-09-04,1
-
-Output: one JSON file per issue in ./output/, containing the raw API
-response, plus a companion .txt file with just the extracted OCR text
-from each page (segment) -- this is what you actually want to read.
+RATE LIMITS (loc.gov JSON/YAML API):
+- Documented ceiling ~20 requests/minute.
+- Script defaults to 4.0 s (~15/min). Do not go below 3.1 s.
+- On 429 the script backs off exponentially.
+- On non-JSON (CAPTCHA) response it stops entirely.
 """
 
 import argparse
 import csv
 import json
+import os
+import re
 import sys
 import time
-from pathlib import Path
-from urllib.request import Request, urlopen
-from urllib.error import HTTPError, URLError
+import urllib.request
+import urllib.error
+from datetime import datetime, timedelta
 
-API_BASE = "https://www.loc.gov"
-DEFAULT_DELAY = 6.0  # seconds between requests -- do not lower this casually
-MAX_RETRIES = 3
+BASE = "https://www.loc.gov/resource/{lccn}/{date}/ed-1/"
 USER_AGENT = (
-    "EH-Jennings-Research/1.0 (personal genealogy research; "
-    "contact via GitHub repo RGJIV/EH-Jennings-Research)"
+    "EH-Jennings-Research/1.1 "
+    "(personal genealogy research; github.com/RGJIV/EH-Jennings-Research)"
 )
+PROGRESS_FILE = ".chronicling_progress"
 
+def fetch_issue(lccn, date_str, delay, max_retries=4):
+    """Fetch one day's issue JSON. Returns dict or None."""
+    url = BASE.format(lccn=lccn, date=date_str) + "?fo=json"
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
 
-def build_resource_url(lccn: str, date: str, edition: str = "1") -> str:
-    """Build the loc.gov resource JSON endpoint for a specific newspaper issue.
-
-    Pattern confirmed working against loc.gov's current API:
-        https://www.loc.gov/resource/{lccn}/{date}/ed-{edition}/?fo=json
-    """
-    return f"{API_BASE}/resource/{lccn}/{date}/ed-{edition}/?fo=json"
-
-
-def fetch_json(url: str, max_retries: int = MAX_RETRIES, delay: float = DEFAULT_DELAY) -> dict | None:
-    """Fetch a loc.gov JSON API endpoint with retry/backoff.
-
-    Returns the parsed JSON dict on success, or None if every attempt failed
-    (bot-detection blocks, timeouts, etc.) -- callers should treat None as
-    "could not retrieve this time," not "this content does not exist."
-    """
-    for attempt in range(1, max_retries + 1):
+    for attempt in range(max_retries):
         try:
-            req = Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
-            with urlopen(req, timeout=30) as resp:
-                if resp.status != 200:
-                    print(f"  [warn] HTTP {resp.status} on attempt {attempt} for {url}")
-                else:
-                    return json.loads(resp.read().decode("utf-8"))
-        except HTTPError as e:
-            print(f"  [warn] HTTPError {e.code} on attempt {attempt} for {url}: {e.reason}")
-        except URLError as e:
-            print(f"  [warn] URLError on attempt {attempt} for {url}: {e.reason}")
+            with urllib.request.urlopen(req, timeout=45) as resp:
+                data = resp.read()
+                time.sleep(delay)
+                return json.loads(data)
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                time.sleep(delay)
+                return None
+            if e.code == 429:
+                wait = 90 * (attempt + 1)
+                print(f"  [429] Rate limited. Waiting {wait}s...", file=sys.stderr)
+                time.sleep(wait)
+                continue
+            print(f"  [HTTP {e.code}] {url}", file=sys.stderr)
+            time.sleep(delay)
+            return None
+        except urllib.error.URLError as e:
+            print(f"  [URLError] {e.reason} on {url}", file=sys.stderr)
+            time.sleep(delay)
+            return None
         except json.JSONDecodeError:
-            print(f"  [warn] Response wasn't valid JSON on attempt {attempt} for {url} "
-                  f"(likely got an HTML block page instead of the API response)")
-
-        if attempt < max_retries:
-            backoff = delay * attempt  # linear backoff: 6s, 12s, 18s...
-            print(f"  retrying in {backoff:.0f}s...")
-            time.sleep(backoff)
-
+            print(f"  [Non-JSON / CAPTCHA] {url}", file=sys.stderr)
+            print(
+                "Stopping. Wait at least 1 hour before resuming and "
+                "consider increasing --delay.",
+                file=sys.stderr,
+            )
+            sys.exit(1)
+    print(f"  [FAILED after {max_retries} retries] {url}", file=sys.stderr)
     return None
 
+def extract_segments(issue_json):
+    """Extract page-level OCR + metadata."""
+    segments = issue_json.get("segments") or []
+    out = []
+    for seg in segments:
+        text_parts = seg.get("description") or []
+        if isinstance(text_parts, list):
+            text = " ".join(str(p) for p in text_parts)
+        else:
+            text = str(text_parts)
+        page_number = ""
+        np = seg.get("number_page")
+        if isinstance(np, list) and np:
+            page_number = str(np[0])
+        elif np:
+            page_number = str(np)
+        out.append({
+            "page_url": seg.get("url", ""),
+            "page_number": page_number,
+            "text": text,
+        })
+    return out
 
-def extract_ocr_text(data: dict) -> list[str]:
-    """Pull the OCR text out of each page/segment of a resource response.
+def search_keywords(text, keywords):
+    hits = []
+    lower_text = text.lower()
+    for kw in keywords:
+        kw_lower = kw.lower()
+        if kw_lower in lower_text:
+            for m in re.finditer(re.escape(kw_lower), lower_text):
+                start = max(0, m.start() - 160)
+                end = min(len(text), m.end() + 160)
+                context = text[start:end].replace("\n", " ").strip()
+                hits.append((kw, context))
+    return hits
 
-    Full-page OCR text lives in segments[].description as a list of
-    paragraphs/blocks. Returns one string per segment (page); most single-
-    edition issues have one segment per page image.
-    """
-    texts = []
-    for segment in data.get("segments", []):
-        desc = segment.get("description", [])
-        if desc:
-            texts.append("\n\n".join(desc))
-    return texts
+def daterange(start, end):
+    d = start
+    while d <= end:
+        yield d
+        d += timedelta(days=1)
 
+def load_progress():
+    if os.path.exists(PROGRESS_FILE):
+        with open(PROGRESS_FILE) as f:
+            return f.read().strip()
+    return None
 
-def process_issue(lccn: str, date: str, edition: str, outdir: Path, delay: float) -> bool:
-    url = build_resource_url(lccn, date, edition)
-    safe_name = f"{lccn}_{date}_ed{edition}"
-    print(f"Fetching {safe_name} -> {url}")
-
-    data = fetch_json(url, delay=delay)
-    if data is None:
-        print(f"  [FAILED] Could not retrieve {safe_name} after retries. "
-              f"Logging to output/{safe_name}.FAILED and moving on.")
-        (outdir / f"{safe_name}.FAILED").write_text(
-            f"Failed to fetch {url}\nTry again later with a longer --delay.\n"
-        )
-        return False
-
-    (outdir / f"{safe_name}.json").write_text(json.dumps(data, indent=2))
-
-    texts = extract_ocr_text(data)
-    if texts:
-        combined = "\n\n===== PAGE BREAK =====\n\n".join(texts)
-        (outdir / f"{safe_name}.txt").write_text(combined)
-        print(f"  [OK] Saved {safe_name}.json and {safe_name}.txt "
-              f"({len(texts)} page(s) of OCR text)")
-    else:
-        print(f"  [OK] Saved {safe_name}.json but no OCR text found in segments "
-              f"(item may not have hassegments=true, or may be image-only)")
-
-    return True
-
+def save_progress(date_str):
+    with open(PROGRESS_FILE, "w") as f:
+        f.write(date_str)
 
 def main():
-    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--lccn", help="Newspaper LCCN, e.g. sn88085947")
-    parser.add_argument("--date", help="Issue date, YYYY-MM-DD")
-    parser.add_argument("--edition", default="1", help="Edition number (default: 1)")
-    parser.add_argument("--batch", help="CSV file of lccn,date,edition rows for bulk fetching")
-    parser.add_argument("--delay", type=float, default=DEFAULT_DELAY,
-                         help=f"Seconds to wait between requests (default: {DEFAULT_DELAY}). "
-                              f"Increase this if you start getting blocked.")
-    parser.add_argument("--outdir", default="output", help="Output directory (default: ./output)")
-    args = parser.parse_args()
+    ap = argparse.ArgumentParser(
+        description="Walk Chronicling America via loc.gov JSON API and search OCR."
+    )
+    ap.add_argument("--lccn", required=True, help="LCCN, e.g. sn86092356")
+    ap.add_argument("--start", required=True, help="Start date YYYY-MM-DD")
+    ap.add_argument("--end", required=True, help="End date YYYY-MM-DD")
+    ap.add_argument("--keywords", nargs="+", required=True,
+                    help="Keywords/phrases (case-insensitive)")
+    ap.add_argument("--ocr-variants", nargs="*", default=[],
+                    help="Additional OCR-error spellings to search")
+    ap.add_argument("--output", default="matches.csv")
+    ap.add_argument("--delay", type=float, default=4.0,
+                    help="Seconds between requests (default 4.0)")
+    ap.add_argument("--resume", action="store_true",
+                    help="Resume from last successful date in progress file")
+    args = ap.parse_args()
 
-    outdir = Path(args.outdir)
-    outdir.mkdir(exist_ok=True)
+    start = datetime.strptime(args.start, "%Y-%m-%d").date()
+    end = datetime.strptime(args.end, "%Y-%m-%d").date()
 
-    jobs = []
-    if args.batch:
-        with open(args.batch, newline="") as f:
-            for row in csv.reader(f):
-                if not row or row[0].strip().startswith("#"):
-                    continue
-                lccn = row[0].strip()
-                date = row[1].strip()
-                edition = row[2].strip() if len(row) > 2 else "1"
-                jobs.append((lccn, date, edition))
-    elif args.lccn and args.date:
-        jobs.append((args.lccn, args.date, args.edition))
-    else:
-        parser.error("Provide either --lccn/--date or --batch")
+    if args.resume:
+        last = load_progress()
+        if last:
+            resume_date = datetime.strptime(last, "%Y-%m-%d").date() + timedelta(days=1)
+            if resume_date > start:
+                print(f"Resuming from {resume_date}", file=sys.stderr)
+                start = resume_date
 
-    print(f"Processing {len(jobs)} issue(s) with {args.delay}s delay between requests...\n")
+    if args.delay < 3.1:
+        print("Warning: delay < 3.1 s exceeds documented 20/min limit.", file=sys.stderr)
 
-    results = {"ok": 0, "failed": 0}
-    for i, (lccn, date, edition) in enumerate(jobs):
-        ok = process_issue(lccn, date, edition, outdir, args.delay)
-        results["ok" if ok else "failed"] += 1
-        if i < len(jobs) - 1:
-            time.sleep(args.delay)
+    all_keywords = list(args.keywords) + list(args.ocr_variants)
+    results = []
+    checked = 0
+    found_issues = 0
 
-    print(f"\nDone. {results['ok']} succeeded, {results['failed']} failed.")
-    if results["failed"]:
-        print("Failed issues are logged as .FAILED files in the output directory. "
-              "Re-run with a longer --delay before concluding a source is unreachable.")
-        sys.exit(1)
+    for d in daterange(start, end):
+        date_str = d.strftime("%Y-%m-%d")
+        print(f"Checking {date_str}...", file=sys.stderr)
+        issue = fetch_issue(args.lccn, date_str, args.delay)
+        checked += 1
+        save_progress(date_str)
 
+        if issue is None:
+            continue
+
+        found_issues += 1
+        segments = extract_segments(issue)
+        for seg in segments:
+            hits = search_keywords(seg["text"], all_keywords)
+            for kw, context in hits:
+                results.append({
+                    "date": date_str,
+                    "keyword": kw,
+                    "page_url": seg["page_url"],
+                    "page_number": seg["page_number"],
+                    "context": context,
+                })
+                print(f"  MATCH ({kw}) {date_str} p{seg['page_number']}", file=sys.stderr)
+
+    with open(args.output, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(
+            f, fieldnames=["date", "keyword", "page_url", "page_number", "context"]
+        )
+        writer.writeheader()
+        writer.writerows(results)
+
+    print(
+        f"\nDone. Checked {checked} days, found {found_issues} issues, "
+        f"{len(results)} hits → {args.output}",
+        file=sys.stderr,
+    )
 
 if __name__ == "__main__":
     main()
