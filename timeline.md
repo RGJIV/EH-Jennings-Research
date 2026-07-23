@@ -21,6 +21,7 @@ Focus: Pre-1930 events only. Status notes added 2026-07-23 where claims were cla
 - 1898 (Post-Oct 3): WV oil leases (Tyler Co.; full list in biography; *Sistersville Oil Review* Oct 19, 1898) — Confirmed.
 - 1900-1906: NC real estate mentions.
 - 1903: Son Richard Gundry Yale graduation.
+- **1904–05: E.H. Jennings & Brothers active in Sugar Grove / Knoxville oil field, Jefferson County, Ohio** (leases subject of *Williams v. Jennings* suit; well No. 8 on M.M. Culp farm reached Berea grit, Apr 1905). Partners named as Edward H., R.M., John G., and Everett. R.M. and John G. align with known brothers; Everett still unconfirmed. — Confirmed (primary newspaper).
 - 1905: Remarried Ella Bailey; NC lumber entry (Buncombe County timber).
 - 1905–1906: PA leases (Zelienople).
 - 1907: Mother death; brother Richard Morley Jr. death.
@@ -41,6 +42,7 @@ Focus: Pre-1930 events only. Status notes added 2026-07-23 where claims were cla
 | 1852      | Birth                        | Bradys Bend, PA           | Find a Grave. |
 | 1870s–1890s | Oil career, marriage, family | Pennsylvania              | Spouse death 1896; Columbia National Bank founded 1893. |
 | 1898      | Acquired oil leases (1,065 acres) | Tyler County, W. Va.      | Lemasters, Hough, Parks, Hardman. |
+| 1904–05   | Ohio oil operations (Sugar Grove / Knoxville field) | Jefferson Co., OH         | *Sistersville Daily Oil Review*; partners include known brothers R.M. & John G. |
 | 1900s     | NC lumber entry; PA leases   | PA/NC                     | Buncombe timber 1905; Zelienople 1905–1906. |
 | 1910      | Graft scandal arrest         | Pittsburgh, PA            | Bail $10k–$15k; Columbia National Bank president. |
 | 1911      | Toxaway purchase             | North Carolina            | $100,000; lumber/resorts. |

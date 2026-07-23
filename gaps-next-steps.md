@@ -9,7 +9,8 @@
 - Colonial Trust Co.: E.H. confirmed as president in contemporary bank history.
 - 1921 *Commissioners v. Jennings* (181 N.C. 393): now fully verified from published North Carolina Reports.
 - Probate venue: Allegheny County Wills & Orphans Division identified; physical request path documented.
-- **Toxaway Company / Lake Toxaway cluster**: ownership path (largest shareholder → 1911 receivership purchase → dam owner at 1916 failure → estate continuation → 1955/1960 sales), dam construction and failure, principal litigation, and post-1923 family deeds now documented with primary + strong secondary support. See dedicated `toxaway.md` and sources.md rows 31–38.
+- Toxaway Company / Lake Toxaway cluster: ownership path, dam construction and failure, principal litigation, and post-1923 family deeds documented (see `toxaway.md`).
+- **Ohio 1904–05 operations**: E.H. Jennings & Brothers confirmed active in Sugar Grove / Knoxville oil field, Jefferson Co., OH (primary Sistersville articles). Partnership partners R.M. and John G. align with known brothers; Everett still unidentified.
 
 **Still open**
 - Exact birth/death for Edward Jr.
@@ -18,6 +19,9 @@
 - Federal Oil Co. / Transylvania Oil Syndicate: only 1931 family-interest mentions; no incorporation or operational records.
 - 1923 estate valuation, heirs, and distribution (requires physical Allegheny County file).
 - R.G. Jennings Sr. post-1923 business activity (oil/gas continuation vs. liquidation vs. NC land focus).
+- **Outcome of *Charles M. Williams v. E.H. Jennings et al.* (Jefferson Co. Common Pleas, Steubenville, OH, ~1904)** — still unknown.
+- **Identity of “Everett Jennings”** named as partner in the 1904 article — still unconfirmed.
+- **Independent corporate confirmation of Kanawha Oil Company** beyond the 1904 article and biographical sketch.
 - Unindexed society records for oil/lumber business.
 - Undigitized Records: Transylvania Co. Superior Court/SC county courts (1916-1921; require in-person); incomplete appellate (miss settled/non-appealed cases); jurisdictional ambiguity (NC dam/SC damage).
 - Sparse Documentation: Low toll/rural setting reduced records; newspapers event-focused, not outcomes.
@@ -33,6 +37,7 @@
 3. Contact Armstrong Historical Society (achmgs@gmail.com) for tax/microfilm on Jennings oil.
 4. Search FamilySearch for Richard Jr.'s 1940 census (post-1930, but for lineage).
 5. loc.gov: Refine with state filters (PA/NC); use "E H Jennings"/"EH Jennings"; paginated URLs; view_image on JP2s for custom OCR.
+6. **Jefferson County, OH court records** (Steubenville) for *Williams v. Jennings* outcome and any related dockets.
 
 **Court / archives**
 - Transylvania Co. Clerk (www.nccourts.gov, 828-885-3000) for dockets/minute books.
@@ -48,5 +53,5 @@
 
 **Repo**
 - Continue appending only verified primary rows to sources.md.
-- Dedicated `toxaway.md` now exists; expand with primary court/land files as obtained.
+- Dedicated `toxaway.md` and `sketch-companies-status.md` now exist.
 - Consider holdings-tracker.md once estate and additional corporate records arrive.
