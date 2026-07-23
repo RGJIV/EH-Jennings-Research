@@ -4,6 +4,7 @@
 
 **Resolved this round**
 - Pure Oil identity: confirmed as the original 1895 independent (NJ-incorporated, Pittsburgh-area) company; E.H. major stockholder who sold large block 1916–17.
+- Detailed Pure Oil stock-sale record (row 25): 941,000 shares sold May/June 1917 for $23,054,500 to William A. Read & Co. / Ohio Cities Gas; deposited at Columbia National Bank; *Queen v. Jennings* commission case fully documented.
 - Columbia National Bank presidency: firmly E.H. Jennings (founder 1893); no evidence supports R.G. Jennings holding the office (including at 1927 merger).
 - Colonial Trust Co.: E.H. confirmed as president in contemporary bank history.
 - 1921 *Commissioners v. Jennings* (181 N.C. 393): now fully verified from published North Carolina Reports.
